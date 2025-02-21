@@ -28,6 +28,24 @@ p{
 }
 
 /* NavBar */
+
+
+
+.sticking .navbar{
+    background-color: #ffffff7f !important;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);  
+    position: sticky;
+    transition: background-color 1s ease, backdrop-filter 1s ease;
+}
+
+.navbar a {
+    font-weight: bold;
+}
+.sticking .navbar a {
+    color: #6F3939 !important;
+}
+
 .navbar-toggler {
     border: none !important;
     outline: none !important; 

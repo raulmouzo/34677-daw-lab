@@ -23,7 +23,7 @@
 .img-prd img {
     object-fit: cover;
     object-position: center;
-    max-height: 300px; /* Limits image height */
+    max-height: 300px; 
     width: 100%;
 }
 

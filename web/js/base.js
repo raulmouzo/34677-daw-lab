@@ -11,6 +11,21 @@ class HeaderComponent extends HTMLElement {
 }
 window.customElements.define('my-header', HeaderComponent);
 
+const primaryHeader = document.querySelector('my-header');
+const scrollWatcher = document.createElement('div');
+
+scrollWatcher.setAttribute('data-scroll-watcher', '');
+primaryHeader.before(scrollWatcher);
+
+const navObserver = new IntersectionObserver((entries) => {
+    console.log(entries)
+    primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting);
+
+});
+
+navObserver.observe(scrollWatcher);
+
+
 class FooterComponent extends HTMLElement {
     constructor() {
         super();
