@@ -1,0 +1,70 @@
+/* Base CSS for the website */
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0rem !important;
+}
+  
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #555;
+    margin: 0rem !important;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: #555;
+    margin: 0rem !important;
+}
+
+p{
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0rem !important;
+}
+
+/* NavBar */
+.navbar-toggler {
+    border: none !important;
+    outline: none !important; 
+    font-size: 24px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 33px;
+}
+
+footer img {
+    height: 3.5rem;
+    
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.custom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.custom-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
