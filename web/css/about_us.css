@@ -1,0 +1,38 @@
+h1 {
+    color: #fff !important;
+}
+
+#about_us_img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 400px; 
+    filter: brightness(50%);
+    transition: filter 1s ease-in-out; 
+}
+
+#about_us_img:hover {
+    filter: brightness(80%);
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.highlight-text {
+    color: #6F3939;
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;
+}
