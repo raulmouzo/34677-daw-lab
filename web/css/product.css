@@ -1,0 +1,105 @@
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+article{
+    margin-bottom: 20px;
+}
+
+.card {
+    height: 100%;
+}
+
+.img-prd img {
+    object-fit: cover;
+    object-position: center;
+    max-height: 300px; 
+    width: 100%;
+}
+
+.prd article {
+    margin-bottom: 30px;
+}
+
+.prd a {
+    text-decoration: none;  
+    color: #333;           
+}
+
+.icon-button {
+    display: none; /* Only display on mobile/tablets*/
+    opacity: 0.8;
+    position: absolute;
+    top:5%;
+    left: 50%;
+    transform: translate(-50%); 
+    cursor: pointer; 
+    border-radius: 50%;
+    padding: 1px;
+    justify-content: center;
+    align-items: center; 
+    border: none;
+}
+
+
+.sizes {
+    /* Flex */
+    display: flex;
+    height: 15%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* Background effects */
+    background-color: #ffffff7f !important;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);  
+    
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* Transition */
+    opacity: 0; 
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.card:hover .sizes {
+    opacity: 1;
+}
+
+.sizes button {
+    background-color: transparent;
+    color: #000; 
+    border: none;
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sizes button:hover {
+    font-weight: bold;
+}
+
+.sizes .btn:hover {
+    background-color: #7f7f7f;
+}
+
+@media (max-width: 768px) {
+    .icon-button {
+        display: flex;
+    }
+    .card:hover .sizes {
+        opacity: 0;
+    }
+    .show {
+        opacity: 1 !important;
+    }
+}
