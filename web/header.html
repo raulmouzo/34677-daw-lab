@@ -39,12 +39,123 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link icon" role="button">
+                    <button class="nav-link icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <box-icon name='shopping-bag' type='solid' color='gray'></box-icon>
-                        <span class="visually-hidden">Carrito</span>
-                    </a>
+                        <span class="visually-hidden">Cesta</span>
+                    </button>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title" id="offcanvasRightLabel">Cesta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="cart-box">
+            <div class="items">
+                <div class="cart-item">
+                    <div class="image-wrapper">
+                        <img src="img/products_hoodie/product_3/image_0.webp" alt="Imagen de producto">
+                    </div>
+                    <div class="item-info">
+                        <h4>COLNE LOGO OVERSIZED HOODIE</h4>
+                        <p class="item-brand">Pegador</p>
+                        <p class="item-price">59,95 €</p>
+                        <p class="item-size">L</p>
+                        <div class="quantity">
+                            <div class="input-group">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                                    <box-icon name='minus' size="20px"></box-icon>
+                                </button>
+                                <input type="text" id="quantity" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                    <box-icon name='plus' size="20px"></box-icon>
+                                </button>
+                            </div>  
+                        </div>                  
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="image-wrapper">
+                        <img src="img/products_hoodie/product_1/image_0.webp" alt="Imagen de producto">
+                    </div>
+                    <div class="item-info">
+                        <h4>Pantalones UNISEX</h4>
+                        <p class="item-brand">YOURTURN</p>
+                        <p class="item-price">49,99 €</p>
+                        <p class="item-size">M</p>
+                        <div class="quantity">
+                            <div class="input-group">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                                    <box-icon name='minus' size="20px"></box-icon>
+                                </button>
+                                <input type="text" id="quantity" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                    <box-icon name='plus' size="20px"></box-icon>
+                                </button>
+                            </div>  
+                        </div>                  
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="image-wrapper">
+                        <img src="img/products_hoodie/product_4/image_0.webp" alt="Imagen de producto">
+                    </div>
+                    <div class="item-info">
+                        <h4>THEORY OF ANOMALY FLUFFY</h4>
+                        <p class="item-brand">Upscale by Mister Tee</p>
+                        <p class="item-price">49,99 €</p>
+                        <p class="item-size">L</p>
+                        <div class="quantity">
+                            <div class="input-group">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                                    <box-icon name='minus' size="20px"></box-icon>
+                                </button>
+                                <input type="text" id="quantity" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                    <box-icon name='plus' size="20px"></box-icon>
+                                </button>
+                            </div>  
+                        </div>                  
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="image-wrapper">
+                        <img src="img/products_hoodie/product_1/image_0.webp" alt="Imagen de producto">
+                    </div>
+                    <div class="item-info">
+                        <h4>SOLO TEE</h4>
+                        <p class="item-brand">Nike Sportswear</p>
+                        <p class="item-price">59,95 €</p>
+                        <p class="item-size">L</p>
+                        <div class="quantity">
+                            <div class="input-group">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                                    <box-icon name='minus' size="20px"></box-icon>
+                                </button>
+                                <input type="text" id="quantity" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                    <box-icon name='plus' size="20px"></box-icon>
+                                </button>
+                            </div>  
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+            
+            <div class="under-cart">
+                <div class="total">
+                    <p>Total</p>
+                    <p>219,88 €</p>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-primary" onclick="alert('Compra realizada!')">Checkout</button>
+                    <button type="button" class="btn btn-secondary" onclick="alert('Cesta vaciado!')">Vaciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
