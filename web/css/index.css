@@ -1,3 +1,6 @@
+main {
+    margin-top: 0;
+}
 /* Primary image styling for banners or main visuals */
 .img-primary {
     width: 100%;
@@ -6,3 +9,4 @@
     object-fit: cover;
     overflow: hidden;
 }
+
