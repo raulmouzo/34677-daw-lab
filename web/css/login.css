@@ -1,0 +1,78 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-register {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.login {
+    flex: 1;
+    min-width: 260px;
+}
+
+.login h2, .register h2 {
+    margin-bottom: 20px;
+    color: #6f3939;
+}
+
+.register {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 260px;
+}
+
+box-icon {
+    margin-right: 15px;
+}
+
+.login-btn{
+    border: 1px solid #6f3939;
+    border-radius: 25px;
+    width: 100%;
+    padding: 10px 20px;
+    color: #6f3939;
+}
+
+.login-btn:hover {
+    border: 1px solid #6f3939;
+    background-color: #6f3939;
+    color: white;
+}
+
+.register-btn {
+    border-radius: 25px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.register-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .login-register{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .register {
+        display: none;
+    }
+    .register-mobile {
+        display: block;
+    }
+}
