@@ -1,0 +1,46 @@
+
+.sidebar {
+    margin-top: 70px;
+}
+
+.sidebar .nav {
+    flex-direction: column;
+}
+
+.sidebar .nav-item {
+    text-decoration: none;
+    color: black;
+}
+
+.primary-table {
+    margin-top: 20px;
+}
+
+.secondary-table {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.cancel-btn {
+    width: 100%;
+    height: 100%;
+    padding: auto;
+}
+
+.primary-table th,td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-top: 0;
+        margin-bottom: 20px;
+        
+    }
+    .sidebar .nav {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
