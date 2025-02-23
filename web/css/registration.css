@@ -2,10 +2,6 @@
     margin-top: 1.5rem;
 }
 
-.registration h2{
-    color: #6f3939;
-}
-
 .registration {
     padding: 30px 0;
     display: flex;
@@ -45,16 +41,11 @@
     justify-content: space-between;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
+.registration-form form label {
+    font-size: 0.9rem;
+    color: #6f3939;
+    margin-left: 2px;
+    margin-bottom: 5px;
 }
 
 .buttons {

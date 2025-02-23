@@ -23,55 +23,71 @@
                       	</picture>
                     </div>
                     <div class="registration-form">
-                        <h2>Introduce tus datos</h2>
                         <form>
-                          <div class="mb-1 mt-3">
-                              <label for="UserInput" class="visually-hidden">Usuario</label>
-                              <input type="text" class="form-control" id="UserInput" placeholder="Usuario">
-                          </div>
-                          <div class="mb-1">
-                              <label for="PasswordInput" class="visually-hidden">Contraseña</label>
-                              <input type="password" class="form-control" id="PasswordInput" placeholder="Contraseña">
-                          </div>
-                          <div class="mb-1">
-                              <label for="RepeatPassInput" class="visually-hidden">Repite la contraseña</label>
-                              <input type="password" class="form-control" id="RepeatPassInput" placeholder="Repite la contraseña">
-                          </div>
-                          <div class="mb-1">
-                              <label for="NameInput" class="visually-hidden">Nombre</label>
-                              <input type="text" class="form-control" id="NameInput" placeholder="Nombre">
-                          </div>
-                          <div class="mb-1">
-                              <label for="LastNameInput" class="visually-hidden">Apellidos</label>
-                              <input type="text" class="form-control" id="LastNameInput" placeholder="Apellidos">
-                          </div>
-                          <div class="mb-1">
-                              <label for="AddressInput" class="visually-hidden">Domicilio</label>
-                              <input type="text" class="form-control" id="AddressInput" placeholder="Domicilio">
-                          </div>
-                          <div class="mb-1">
-                              <label for="CityInput" class="visually-hidden">Población</label>
-                              <input type="text" class="form-control" id="CityInput" placeholder="Población">
-                          </div>
-                          <div class="mb-1">
-                              <label for="ProvinceInput" class="visually-hidden">Provincia</label>
-                              <input type="text" class="form-control" id="ProvinceInput" placeholder="Provincia">
-                          </div>
-                          <div class="mb-1">
-                              <label for="CPInput" class="visually-hidden">Código Postal</label>
-                              <input type="text" class="form-control" id="CPInput" placeholder="Código Postal">
-                          </div>
-                          <div class="mb-3">
-                              <label for="TelfInput" class="visually-hidden">Teléfono</label>
-                              <input type="text" class="form-control" id="TelfInput" placeholder="Teléfono">
-                          </div>
-                          <div class="buttons">
-                              <button type="submit" class="btn btn-primary">Registrarse</button>
-                              <button type="button" class="btn btn-secondary">Cancelar</button>
-                          </div>
-                      </form>                                       
+							<fieldset>
+								<legend>Datos de acceso</legend>
+								<div class="mb-1 mt-3">
+									<label for="UserInput">Usuario*</label>
+									<input type="text" class="form-control" id="UserInput" placeholder="Usuario" autocomplete="username" required>
+								</div>
+								<div class="mb-1">
+									<label for="PasswordInput">Contraseña*</label>
+									<input type="password" class="form-control" id="PasswordInput" placeholder="Contraseña" autocomplete="new-password" minlength="8" required>
+								</div>
+								<div class="mb-1">
+									<label for="RepeatPassInput">Repite la contraseña*</label>
+									<input type="password" class="form-control" id="RepeatPassInput" placeholder="Repite la contraseña" minlength="8" required>
+								</div>
+							</fieldset>
+						
+							<fieldset>
+								<legend>Datos de usuario</legend>
+								<div class="mb-1">
+									<label for="NameInput">Nombre*</label>
+									<input type="text" class="form-control" id="NameInput" placeholder="Nombre" autocomplete="given-name" required>
+								</div>
+								<div class="mb-1">
+									<label for="LastNameInput">Apellidos*</label>
+									<input type="text" class="form-control" id="LastNameInput" placeholder="Apellidos" autocomplete="family-name" required>
+								</div>
+								<div class="mb-1">
+									<label for="TelfInput">Teléfono móvil**</label>
+									<input type="tel" class="form-control" id="TelfInput" placeholder="Teléfono móvil" pattern="[0-9]{9}" autocomplete="tel" required>
+								</div>
+								<div class="mb-1">
+									<label for="AddressInput">Domicilio</label>
+									<input type="text" class="form-control" id="AddressInput" placeholder="Domicilio" autocomplete="address-line1">
+								</div>
+								<div class="row">
+									<div class="mb-1 col-md-8">
+										<label for="province" class="form-label">Provincia *</label>
+										<select class="form-select" id="province" required>
+											<option selected disabled>Selecciona una provincia</option>
+											<option>Madrid</option>
+											<option>Barcelona</option>
+											<option>Valencia</option>
+											<option>Sevilla</option>
+										</select>
+									</div>
+									<div class="mb-1 col-md-4">
+										<label for="CPInput">Código Postal</label>
+										<input type="text" class="form-control" id="CPInput" placeholder="Código Postal" pattern="[0-9]{5}" autocomplete="postal-code">
+									</div>
+								</div>
+								<div class="mb-1">
+									<label for="CityInput">Población</label>
+									<input type="text" class="form-control" id="CityInput" placeholder="Población" autocomplete="address-level2">
+								</div>
+							</fieldset>
+						
+							<div class="buttons">
+								<button type="submit" class="btn btn-primary">Registrarse</button>
+								<a href="login.html" class="btn btn-secondary">Cancelar</a>
+							</div>
+						</form>															
                     </div>
                 </div>
+			</div>
 		</main>
 		<my-footer></my-footer>
     	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

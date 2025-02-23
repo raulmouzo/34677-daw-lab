@@ -212,21 +212,25 @@ footer img {
     width: 100%;
 }
 
-.under-cart .buttons button:first-child {
+.under-cart .buttons a {
     flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #6f3939;
+    border: 1px solid #6f3939;
     color: #fff;
 }
-.under-cart .buttons button:first-child:hover {
+.under-cart .buttons a:hover {
     background-color: #804242;
 }
 
-.under-cart .buttons button:nth-child(2) {
+.under-cart .buttons button {
     flex: 1;
     background-color: #c05151;
     color: #fff;
 }
-.under-cart .buttons button:nth-child(2):hover {
+.under-cart .buttons button:hover {
     background-color: #d15b5b;
 }
 
