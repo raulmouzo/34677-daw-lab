@@ -1,0 +1,35 @@
+.sidebar {
+    margin-top: 70px;
+}
+
+.sidebar .nav {
+    flex-direction: column;
+}
+
+.sidebar .nav-item {
+    text-decoration: none;
+    color: black;
+}
+
+#repeatPassField {
+    display: none;
+}
+
+.content button {
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-top: 0;
+        margin-bottom: 20px;
+        
+    }
+    .sidebar .nav {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .content button {
+        width: 100%;
+    }
+}
