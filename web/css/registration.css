@@ -1,0 +1,105 @@
+.container {
+    margin-top: 1.5rem;
+}
+
+.registration h2{
+    color: #6f3939;
+}
+
+.registration {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.registration-img{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 260px;
+}
+
+.registration-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-height: 800px;
+}
+
+.registration-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 260px;
+}
+
+.registration-form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn{
+    border: 1px solid #6f3939;
+    border-radius: 25px;
+    width: 100%;
+    padding: 10px 20px;
+    color: #6f3939;
+}
+
+.buttons .btn-primary {
+    flex: 4;
+    width: 100%;
+    border: 1px solid #6f3939;
+    width: 100%;
+    background-color: #6f3939;
+    color: #fff;
+}
+
+.buttons .btn-primary:hover {
+    border: 1px solid #6f3939;
+    background-color: #6f3939;
+    color: white;
+}
+
+.buttons .btn-secondary {
+    flex: 1;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .registration {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .registration-img img{
+        width: 100%;
+    }
+    .registration-form form {
+        gap: 10px;
+    }
+}
