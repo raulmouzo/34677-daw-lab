@@ -1,3 +1,7 @@
+main {
+    margin: 0;
+}
+
 my-header {
     display: none !important;
 }
