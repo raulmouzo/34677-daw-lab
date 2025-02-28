@@ -16,36 +16,43 @@
 <body>
 	<my-header class="sticky-top"></my-header>
 	<main>
-		<picture>
-			<source media="(max-width: 768px)" srcset="img/home_sm.png">
-			<source media="(max-width: 1024px)" srcset="img/home_md.png">
-			<img src="img/home_default.png" class="img-fluid img-primary" alt="Winter collection image">
-		</picture>
+		<div class="hero">
+			<div class="hero-btn-holder">
+				<a href="product_hoodies.html" class="btn btn-light hero-btn">Sudaderas</a>
+				<a href="product_t-shirts.html" class="btn btn-light hero-btn">Camisetas</a>
+				<a href="product_pants.html" class="btn btn-light hero-btn">Pantalones</a>
+			</div>
+			<picture>
+				<source media="(max-width: 768px)" srcset="img/home_sm.png">
+				<source media="(max-width: 1024px)" srcset="img/home_md.png">
+				<img src="img/home_default.png" class="img-fluid img-primary" alt="Winter collection image">
+			</picture>
+		</div>
 		<div class="container">
 			<section class="row prd">
 				<header class="product-header">
 					<h2>NUEVOS PRODUCTOS</h2>
 					<a href="#" class="btn btn-link">Ver todos</a>
 				</header>
-				<article class="col-md-3">
+				<article class="col-sm-12 col-md-6 col-lg-3">
 					<div class="card">
 						<div id="prd-1" class="carousel slide img-prd">
-							<a href="">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="img/products_hoodie/product_1/image_0.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_hoodie/product_1/image_1.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_hoodie/product_1/image_2.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
+
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/products_hoodie/product_1/image_0.webp" class="d-block w-100"
+										alt="Imagen de producto">
 								</div>
-							</a>
+								<div class="carousel-item">
+									<img src="img/products_hoodie/product_1/image_1.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+								<div class="carousel-item">
+									<img src="img/products_hoodie/product_1/image_2.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+							</div>
+
 							<button class="carousel-control-prev" type="button" data-bs-target="#prd-1"
 								data-bs-slide="prev">
 								<box-icon name='chevron-left' color="black" size="70px"></box-icon>
@@ -56,37 +63,46 @@
 								<box-icon name='chevron-right' color="black" size="70px"></box-icon>
 								<span class="visually-hidden">Next</span>
 							</button>
-						</div>
-						<a href="">
-							<div class="card-body">
-								<h3 class="card-title">Nike Sportswear</h3>
-								<p class="card-text">HOODIE - Sudadera</p>
-								<span>69,95 €</span>
+							<button class="icon-button" aria-label="Open sizes" onclick="showSizes(this)">
+								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
+							</button>
+							<div class="sizes">
+								<button type="button" onclick="alert('Producto añadido!')">S</button>
+								<button type="button" onclick="alert('Producto añadido!')">M</button>
+								<button type="button" onclick="alert('Producto añadido!')">L</button>
+								<button type="button" onclick="alert('Producto añadido!')">XL</button>
 							</div>
-						</a>
+						</div>
+
+						<div class="card-body">
+							<h3 class="card-title">Nike Sportswear</h3>
+							<p class="card-text">HOODIE - Sudadera</p>
+							<span>69,95 €</span>
+						</div>
+
 					</div>
 				</article>
 
-				<article class="col-md-3">
+				<article class="col-sm-12 col-md-6 col-lg-3">
 					<div class="card">
 
 						<div id="prd-2" class="carousel slide img-prd">
-							<a href="">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="img/products_t-shirts/product_1/image_0.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_t-shirts/product_1/image_1.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_t-shirts/product_1/image_2.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
+
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/products_t-shirts/product_1/image_0.webp" class="d-block w-100"
+										alt="Imagen de producto">
 								</div>
-							</a>
+								<div class="carousel-item">
+									<img src="img/products_t-shirts/product_1/image_1.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+								<div class="carousel-item">
+									<img src="img/products_t-shirts/product_1/image_2.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+							</div>
+
 							<button class="carousel-control-prev" type="button" data-bs-target="#prd-2"
 								data-bs-slide="prev">
 								<box-icon name='chevron-left' color="black" size="70px"></box-icon>
@@ -97,37 +113,45 @@
 								<box-icon name='chevron-right' color="black" size="70px"></box-icon>
 								<span class="visually-hidden">Next</span>
 							</button>
+							<button class="icon-button" aria-label="Open sizes" onclick="showSizes(this)">
+								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
+							</button>
+							<div class="sizes">
+								<button type="button" onclick="alert('Producto añadido!')">S</button>
+								<button type="button" onclick="alert('Producto añadido!')">M</button>
+								<button type="button" onclick="alert('Producto añadido!')">L</button>
+								<button type="button" onclick="alert('Producto añadido!')">XL</button>
+							</div>
 						</div>
 
-						<a href="">
-							<div class="card-body">
-								<h3 class="card-title">Champion</h3>
-								<p class="card-text">ATHLETICS GYM WITH PRINT </p>
-								<span>29,95 €</span>
-							</div>
-						</a>
+						<div class="card-body">
+							<h3 class="card-title">Champion</h3>
+							<p class="card-text">ATHLETICS GYM WITH PRINT </p>
+							<span>29,95 €</span>
+						</div>
+
 					</div>
 				</article>
 
-				<article class="col-md-3">
+				<article class="col-sm-12 col-md-6 col-lg-3">
 					<div class="card">
 						<div id="prd-3" class="carousel slide img-prd">
-							<a href="">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="img/products_hoodie/product_2/image_0.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_hoodie/product_2/image_1.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_hoodie/product_2/image_2.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
+
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/products_hoodie/product_2/image_0.webp" class="d-block w-100"
+										alt="Imagen de producto">
 								</div>
-							</a>
+								<div class="carousel-item">
+									<img src="img/products_hoodie/product_2/image_1.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+								<div class="carousel-item">
+									<img src="img/products_hoodie/product_2/image_2.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+							</div>
+
 							<button class="carousel-control-prev" type="button" data-bs-target="#prd-3"
 								data-bs-slide="prev">
 								<box-icon name='chevron-left' color="black" size="70px"></box-icon>
@@ -138,36 +162,45 @@
 								<box-icon name='chevron-right' color="black" size="70px"></box-icon>
 								<span class="visually-hidden">Next</span>
 							</button>
-						</div>
-						<a href="">
-							<div class="card-body">
-								<h3 class="card-title">YOURTURN</h3>
-								<p class="card-text">WASHED ZIP-HOODIE UNISEX</p>
-								<span>44,99 €</span>
+							<button class="icon-button" aria-label="Open sizes" onclick="showSizes(this)">
+								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
+							</button>
+							<div class="sizes">
+								<button type="button" onclick="alert('Producto añadido!')">S</button>
+								<button type="button" onclick="alert('Producto añadido!')">M</button>
+								<button type="button" onclick="alert('Producto añadido!')">L</button>
+								<button type="button" onclick="alert('Producto añadido!')">XL</button>
 							</div>
-						</a>
+						</div>
+
+						<div class="card-body">
+							<h3 class="card-title">YOURTURN</h3>
+							<p class="card-text">WASHED ZIP-HOODIE UNISEX</p>
+							<span>44,99 €</span>
+						</div>
+
 					</div>
 				</article>
 
-				<article class="col-md-3">
+				<article class="col-sm-12 col-md-6 col-lg-3">
 					<div class="card">
 						<div id="prd-4" class="carousel slide img-prd">
-							<a href="">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="img/products_pants/product_1/image_0.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_pants/product_1/image_1.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
-									<div class="carousel-item">
-										<img src="img/products_pants/product_1/image_2.webp" class="d-block w-100"
-											alt="Imagen de producto">
-									</div>
+
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/products_pants/product_1/image_0.webp" class="d-block w-100"
+										alt="Imagen de producto">
 								</div>
-							</a>
+								<div class="carousel-item">
+									<img src="img/products_pants/product_1/image_1.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+								<div class="carousel-item">
+									<img src="img/products_pants/product_1/image_2.webp" class="d-block w-100"
+										alt="Imagen de producto">
+								</div>
+							</div>
+
 							<button class="carousel-control-prev" type="button" data-bs-target="#prd-4"
 								data-bs-slide="prev">
 								<box-icon name='chevron-left' color="black" size="70px"></box-icon>
@@ -178,14 +211,23 @@
 								<box-icon name='chevron-right' color="black" size="70px"></box-icon>
 								<span class="visually-hidden">Next</span>
 							</button>
-						</div>
-						<a href="">
-							<div class="card-body">
-								<h3 class="card-title">ADIDAS ORIGINALS</h3>
-								<p class="card-text">ADIBREAK UNISEX</p>
-								<span>74,95 €</span>
+							<button class="icon-button" aria-label="Open sizes" onclick="showSizes(this)">
+								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
+							</button>
+							<div class="sizes">
+								<button type="button" onclick="alert('Producto añadido!')">S</button>
+								<button type="button" onclick="alert('Producto añadido!')">M</button>
+								<button type="button" onclick="alert('Producto añadido!')">L</button>
+								<button type="button" onclick="alert('Producto añadido!')">XL</button>
 							</div>
-						</a>
+						</div>
+
+						<div class="card-body">
+							<h3 class="card-title">ADIDAS ORIGINALS</h3>
+							<p class="card-text">ADIBREAK UNISEX</p>
+							<span>74,95 €</span>
+						</div>
+
 					</div>
 				</article>
 			</section>
@@ -197,7 +239,11 @@
 		crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	<script src="js/base.js"></script>
-
+	<script>
+		function showSizes(button) {
+			button.nextElementSibling.classList.toggle('show');
+		}
+	</script>
 </body>
 
 </html>
