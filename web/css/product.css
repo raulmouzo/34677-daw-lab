@@ -94,7 +94,7 @@ article{
     background-color: #7f7f7f;
 }
 
-@media (max-width: 768px) {
+@media (hover:none) {
     .icon-button {
         display: flex;
     }
