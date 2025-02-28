@@ -149,12 +149,18 @@ footer img {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
     align-items: start;
 }
 
+.cart-item .item-info h4 {
+    font-size: 0.9rem !important; 
+    font-weight: bold; 
+    color: #3f3f3f; 
+}
+
+
 .item-brand {
-    font-size: 0.9rem; 
+    font-size: 0.8rem; 
     font-weight: bold; 
     color: #3f3f3f; 
 }
@@ -170,15 +176,44 @@ footer img {
     color: #666;
 }
 
+.control-elements {
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+.delete button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 17px;
+}
+
 .quantity {
-    width:50%;
     border: 1px solid #797979;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    max-width: 120px;
 }
+
+/* Remove arrows from input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield; /* Para otros navegadores modernos */
+}
+
 
 .under-cart {
     padding: 40px 0 20px 0;

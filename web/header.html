@@ -1,20 +1,22 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <box-icon name='menu' size="2.2rem" color="gray"></box-icon>
             </button>
             <a class="navbar-brand" href="index.html">
                 <img src="img/blint_logo.png" alt="blint logo" class="d-inline-block align-text-top">
             </a>
-            
+
             <div class="collapse navbar-collapse order-lg-3 order-4" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Productos
                         </a>
                         <ul class="dropdown-menu">
@@ -39,7 +41,8 @@
                     </a>
                 </li>
                 <li>
-                    <button class="nav-link icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <button class="nav-link icon" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <box-icon name='shopping-bag' type='solid' color='gray'></box-icon>
                         <span class="visually-hidden">Cesta</span>
                     </button>
@@ -65,17 +68,27 @@
                         <p class="item-brand">Pegador</p>
                         <p class="item-price">59,95 €</p>
                         <p class="item-size">L</p>
-                        <div class="quantity">
-                            <div class="input-group">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                        <div class="control-elements">
+                            <div class="input-group quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field=""
+                                    aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
                                     <box-icon name='minus' size="20px"></box-icon>
                                 </button>
-                                <input type="number" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                <input type="number" name="quantity"
+                                    class="form-control input-number border-0 text-center" value="1" min="1" max="100"
+                                    aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field=""
+                                    aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
                                     <box-icon name='plus' size="20px"></box-icon>
                                 </button>
-                            </div>  
-                        </div>                  
+                            </div>
+                            <div class="delete">
+                                <button type="button" class="btn btn-danger" aria-label="Eliminar producto"
+                                    onclick="alert('Producto eliminado!')">
+                                    <box-icon type='solid' name='trash-alt' size="20px" color="#fff"></box-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="cart-item">
@@ -87,17 +100,27 @@
                         <p class="item-brand">YOURTURN</p>
                         <p class="item-price">49,99 €</p>
                         <p class="item-size">M</p>
-                        <div class="quantity">
-                            <div class="input-group">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                        <div class="control-elements">
+                            <div class="input-group quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field=""
+                                    aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
                                     <box-icon name='minus' size="20px"></box-icon>
                                 </button>
-                                <input type="number" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                <input type="number" name="quantity"
+                                    class="form-control input-number border-0 text-center" value="1" min="1" max="100"
+                                    aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field=""
+                                    aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
                                     <box-icon name='plus' size="20px"></box-icon>
                                 </button>
-                            </div>  
-                        </div>                  
+                            </div>
+                            <div class="delete">
+                                <button type="button" class="btn btn-danger" aria-label="Eliminar producto"
+                                    onclick="alert('Producto eliminado!')">
+                                    <box-icon type='solid' name='trash-alt' size="20px" color="#fff"></box-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="cart-item">
@@ -109,17 +132,27 @@
                         <p class="item-brand">Upscale by Mister Tee</p>
                         <p class="item-price">49,99 €</p>
                         <p class="item-size">L</p>
-                        <div class="quantity">
-                            <div class="input-group">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                        <div class="control-elements">
+                            <div class="input-group quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field=""
+                                    aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
                                     <box-icon name='minus' size="20px"></box-icon>
                                 </button>
-                                <input type="number" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                <input type="number" name="quantity"
+                                    class="form-control input-number border-0 text-center" value="1" min="1" max="100"
+                                    aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field=""
+                                    aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
                                     <box-icon name='plus' size="20px"></box-icon>
                                 </button>
-                            </div>  
-                        </div>                  
+                            </div>
+                            <div class="delete">
+                                <button type="button" class="btn btn-danger" aria-label="Eliminar producto"
+                                    onclick="alert('Producto eliminado!')">
+                                    <box-icon type='solid' name='trash-alt' size="20px" color="#fff"></box-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="cart-item">
@@ -131,21 +164,31 @@
                         <p class="item-brand">Nike Sportswear</p>
                         <p class="item-price">59,95 €</p>
                         <p class="item-size">L</p>
-                        <div class="quantity">
-                            <div class="input-group">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field="" aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
+                        <div class="control-elements">
+                            <div class="input-group quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="minus" data-field=""
+                                    aria-label="Decrease quantity" onclick="alert('Producto decrementado!')">
                                     <box-icon name='minus' size="20px"></box-icon>
                                 </button>
-                                <input type="number" name="quantity" class="form-control input-number border-0 text-center" value="1" min="1" max="100" aria-label="Product quantity">
-                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field="" aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
+                                <input type="number" name="quantity"
+                                    class="form-control input-number border-0 text-center" value="1" min="1" max="100"
+                                    aria-label="Product quantity">
+                                <button type="button" class="btn border-0 p-0 icon" data-type="plus" data-field=""
+                                    aria-label="Increase quantity" onclick="alert('Producto incrementado!')">
                                     <box-icon name='plus' size="20px"></box-icon>
                                 </button>
-                            </div>  
-                        </div>                  
+                            </div>
+                            <div class="delete">
+                                <button type="button" class="btn btn-danger" aria-label="Eliminar producto"
+                                    onclick="alert('Producto eliminado!')">
+                                    <box-icon type='solid' name='trash-alt' size="20px" color="#fff"></box-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="under-cart">
                 <div class="total">
                     <p>Total</p>
@@ -153,7 +196,7 @@
                 </div>
                 <div class="buttons">
                     <a href="checkout.html" class="btn btn-primary">Checkout</a>
-                    <button type="button" class="btn btn-secondary" onclick="alert('Cesta vaciado!')">Vaciar</button>
+                    <button type="button" class="btn btn-secondary" onclick="alert('Cesta vaciada!')">Vaciar</button>
                 </div>
             </div>
         </div>
