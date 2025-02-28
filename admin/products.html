@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>blint</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+    <my-header class="sticky-top"></my-header>
+    <main class="p-3">
+        <div class="table-responsive container">
+            <h1 class="text-center mb-3">Productos</h1>
+            <table class="table table-striped table-bordered text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Categoría</th>
+                        <th>Archivo</th>
+                        <th>Marca</th>
+                        <th>Descripción</th>
+                        <th>Precio (€)</th>
+                        <th>Cantidad</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="img/product_1/image_0.webp" alt="Producto 1" class="img-thumbnail" width="100">
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Sudadera</option>
+                                <option>Camiseta</option>
+                                <option>Pantalón</option>
+                            </select>
+                        </td>
+                        <td><input type="file" class="form-control"></td>
+                        <td><input type="text" class="form-control" value="Nike Sportswear"></td>
+                        <td><input type="text" class="form-control" value="Sudadera"></td>
+                        <td><input type="text" class="form-control" value="69,95"></td>
+                        <td><input type="number" class="form-control" value="100"></td>
+                        <td><button class="btn btn-outline-secondary" onclick="alert('Artículo modificado')">Modificar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/product_2/image_0.webp" alt="Producto 1" class="img-thumbnail" width="100">
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option>Sudadera</option>
+                                <option>Camiseta</option>
+                                <option selected>Pantalón</option>
+                            </select>
+                        </td>
+                        <td><input type="file" class="form-control"></td>
+                        <td><input type="text" class="form-control" value="YOURTURN"></td>
+                        <td><input type="text" class="form-control" value="Pantalones UNISEX"></td>
+                        <td><input type="text" class="form-control" value="49,99"></td>
+                        <td><input type="number" class="form-control" value="30"></td>
+                        <td><button class="btn btn-outline-secondary" onclick="alert('Artículo modificado')">Modificar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/product_3/image_1.webp" alt="Producto 1" class="img-thumbnail" width="100">
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option>Sudadera</option>
+                                <option selected>Camiseta</option>
+                                <option>Pantalón</option>
+                            </select>
+                        </td>
+                        <td><input type="file" class="form-control"></td>
+                        <td><input type="text" class="form-control" value="Champion"></td>
+                        <td><input type="text" class="form-control" value="ATHLETICS GYM WITH PRINT"></td>
+                        <td><input type="text" class="form-control" value="29,95"></td>
+                        <td><input type="number" class="form-control" value="15"></td>
+                        <td><button class="btn btn-outline-secondary" onclick="alert('Artículo modificado')">Modificar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="add_product.html" class="btn-new btn btn-success">Insertar nuevo producto</a>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/base.js"></script>
+</body>
+
+</html>

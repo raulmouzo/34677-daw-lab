@@ -1,0 +1,57 @@
+body {
+    background-image: url('../img/admin-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff67 !important;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(5px);  
+    position: sticky;
+    transition: background-color 1s ease, backdrop-filter 1s ease;
+}
+
+.form-control {
+    background-color: #ffffff2f;
+}
+
+form label, .login-btn {
+    font-size: 1.2rem;
+    color: #ffffff;
+
+}
+
+.login-btn {
+    width: 100%;
+    border: 2px solid #fff !important;
+    background-color: #81818100;
+}
+
+.login-btn:hover {
+    width: 100%;
+    background-color: #fff !important;
+    border: 2px solid #fff !important;
+    color: #686868;
+}

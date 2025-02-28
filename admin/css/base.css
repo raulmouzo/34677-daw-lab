@@ -1,0 +1,241 @@
+/* Base CSS for the website */
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #555;
+    margin: 0rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: #555;
+    margin: 0rem;
+}
+
+h4 {
+    font-size: 1.15rem;
+    font-weight: normal;
+    color: #555;
+    margin: 0rem;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    margin: 30px 0 100px 0;
+}
+
+/* NavBar */
+
+.sticking .navbar {
+    background-color: #ffffff7f !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    transition: background-color 1s ease, backdrop-filter 1s ease;
+}
+
+.navbar a {
+    font-weight: bold;
+}
+
+.sticking .navbar a {
+    color: #6F3939 !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    font-size: 24px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 33px;
+}
+
+footer img {
+    height: 3.5rem;
+
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.custom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.custom-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Offcanvas body */
+.offcanvas-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.cart-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.items {
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px 10px;
+}
+
+.cart-item:not(:last-child) {
+    border-bottom: 1px solid #d2d2d2;
+    padding-bottom: 20px;
+}
+
+
+.cart-item .image-wrapper {
+    flex: 1;
+    width: 100%;
+}
+
+.cart-item .image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cart-item .item-info {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+
+.item-brand {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+.item-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.item-size {
+    font-size: 1rem;
+    color: #666;
+}
+
+.quantity {
+    width: 50%;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.under-cart {
+    padding: 40px 0 20px 0;
+}
+
+.under-cart .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.under-cart .total p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+.under-cart .buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.under-cart .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.under-cart .buttons a {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6f3939;
+    border: 1px solid #6f3939;
+    color: #fff;
+}
+
+.under-cart .buttons a:hover {
+    background-color: #804242;
+}
+
+.under-cart .buttons button {
+    flex: 1;
+    background-color: #c05151;
+    color: #fff;
+}
+
+.under-cart .buttons button:hover {
+    background-color: #d15b5b;
+}
