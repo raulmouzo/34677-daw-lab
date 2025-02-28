@@ -18,33 +18,56 @@
             <div class="card-body">
                 <form method="POST" action="#">
                     <div class="mb-3">
-                        <label class="form-label">Categoría</label>
-                        <select class="form-select" name="category">
-                            <option>Sudadera</option>
-                            <option>Camiseta</option>
-                            <option>Pantalón</option>
+                        <label class="form-label" for="category">Categoría</label>
+                        <select class="form-select" name="category" id="category" required>
+                            <option value="" disabled selected>Seleccione una categoría</option>
+                            <option value="Sudadera">Sudadera</option>
+                            <option value="Camiseta">Camiseta</option>
+                            <option value="Pantalón">Pantalón</option>
                         </select>
+                        <div class="invalid-feedback">
+                            Por favor, seleccione una categoría.
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Archivos de Imagen</label>
-                        <input type="file" class="form-control" name="image">
+                        <label class="form-label" for="image">Archivos de Imagen</label>
+                        <input type="file" class="form-control" name="image" id="image" accept="image/*" required>
+                        <div class="invalid-feedback">
+                            Por favor, cargue una imagen válida.
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Marca</label>
-                        <input type="text" class="form-control" name="description" placeholder="Marca del producto">
+                        <label class="form-label" for="brand">Marca</label>
+                        <input type="text" class="form-control" name="brand" id="brand" placeholder="Marca del producto"
+                            required minlength="2" maxlength="50">
+                        <div class="invalid-feedback">
+                            La marca debe tener entre 2 y 50 caracteres.
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Descripción</label>
-                        <input type="text" class="form-control" name="description" placeholder="Descripción del producto">
+                        <label class="form-label" for="description">Descripción</label>
+                        <input type="text" class="form-control" name="description" id="description"
+                            placeholder="Descripción del producto" required minlength="2" maxlength="255">
+                        <div class="invalid-feedback">
+                            La descripción debe tener entre 2 y 255 caracteres.
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Precio (€)</label>
-                            <input type="text" class="form-control" name="price" placeholder="Precio del producto">
+                            <label class="form-label" for="price">Precio (€)</label>
+                            <input type="number" class="form-control" name="price" id="price"
+                                placeholder="Precio del producto" required step="0.01" min="0">
+                            <div class="invalid-feedback">
+                                Ingrese un precio válido.
+                            </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">Cantidad</label>
-                            <input type="number" class="form-control" name="quantity" placeholder="Cantidad de producto">
+                            <label class="form-label" for="quantity">Cantidad</label>
+                            <input type="number" class="form-control" name="quantity" id="quantity"
+                                placeholder="Cantidad de producto" required min="1">
+                            <div class="invalid-feedback">
+                                La cantidad debe ser un número positivo.
+                            </div>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success w-100">Guardar</button>
