@@ -30,6 +30,7 @@ article{
 }
 
 .icon-button {
+    z-index: 1001;
     display: none; /* Only display on mobile/tablets*/
     opacity: 0.8;
     position: absolute;
@@ -46,6 +47,7 @@ article{
 
 
 .sizes {
+    z-index: 1001;    
     /* Flex */
     display: flex;
     height: 15%;
