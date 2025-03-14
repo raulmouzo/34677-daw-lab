@@ -215,7 +215,7 @@
 								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
 							</button>
 							<div class="sizes">
-								<button type="button" onclick="alert('Producto añadido!')">S</button>
+								<button type="button" onclick="addProductToCart(1,'ADIDAS ORIGINALS',74.95,'Adidas','Sudadera', 'img/1'  )">S</button>
 								<button type="button" onclick="alert('Producto añadido!')">M</button>
 								<button type="button" onclick="alert('Producto añadido!')">L</button>
 								<button type="button" onclick="alert('Producto añadido!')">XL</button>
@@ -223,7 +223,7 @@
 						</div>
 
 						<div class="card-body">
-							<h3 class="card-title">ADIDAS ORIGINALS</h3>
+							<h3 class="card-title"><bold>ADIDAS ORIGINALS</bold></h3>
 							<p class="card-text">ADIBREAK UNISEX</p>
 							<span>74,95 €</span>
 						</div>
@@ -239,6 +239,7 @@
 		crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	<script src="js/base.js"></script>
+	<script src="js/bag.js"></script>
 	<script>
 		function showSizes(button) {
 			button.nextElementSibling.classList.toggle('show');

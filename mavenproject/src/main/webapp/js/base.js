@@ -7,7 +7,13 @@ class HeaderComponent extends HTMLElement {
         const response = await fetch('header.html');
         const content = await response.text();
         this.innerHTML = content;
+        const cartItemsContainer = document.getElementById("cartItems");
+
+        if (cartItemsContainer) {
+            renderCartItems();
+        }
     }
+    
 }
 window.customElements.define('my-header', HeaderComponent);
 
@@ -18,7 +24,6 @@ scrollWatcher.setAttribute('data-scroll-watcher', '');
 primaryHeader.before(scrollWatcher);
 
 const navObserver = new IntersectionObserver((entries) => {
-    console.log(entries)
     primaryHeader.classList.toggle('sticking', !entries[0].isIntersecting);
 
 });
