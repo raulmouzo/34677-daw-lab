@@ -30,22 +30,13 @@ CREATE TABLE products (
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
-
-CREATE TABLE sizes (
-    id INTEGER NOT NULL AUTO_INCREMENT,
-    size_label VARCHAR(10) NOT NULL UNIQUE,  
-    PRIMARY KEY(id)
-);
-
-
-CREATE TABLE product_sizes (
+CREATE TABLE variants (
     id INTEGER NOT NULL AUTO_INCREMENT,
     product_id INTEGER NOT NULL,
-    size_id INTEGER NOT NULL,
-    stock INTEGER DEFAULT 0, 
+    size_label VARCHAR(10) NOT NULL, 
+    stock INTEGER DEFAULT 0,
     PRIMARY KEY(id),
-    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE,
-    FOREIGN KEY (size_id) REFERENCES sizes(id) ON DELETE CASCADE
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
 CREATE TABLE product_images (
@@ -75,10 +66,10 @@ CREATE TABLE orders (
 
 CREATE TABLE order_details (
     order_id INTEGER NOT NULL,
-    product_size_id INTEGER NOT NULL,
+    variant_id INTEGER NOT NULL, 
     quantity INTEGER DEFAULT 1,
     unit_price DECIMAL(8,2) DEFAULT 0,
-    PRIMARY KEY(order_id, product_size_id),
+    PRIMARY KEY(order_id, variant_id),
     FOREIGN KEY (order_id) REFERENCES orders(id),
-    FOREIGN KEY (product_size_id) REFERENCES product_sizes(id)
+    FOREIGN KEY (variant_id) REFERENCES variants(id) 
 );
