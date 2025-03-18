@@ -106,124 +106,11 @@
             <div class="order-summary col-4">
                 <h1 class="p-3">Resumen de la compra</h1>
                 <div class="cart-box">
-                    <div class="items">
-                        <div class="cart-item">
-                            <div class="image-wrapper">
-                                <img src="img/products_hoodie/product_3/image_0.webp" alt="Imagen de producto">
-                            </div>
-                            <div class="item-info">
-                                <h4>COLNE LOGO OVERSIZED HOODIE</h4>
-                                <p class="item-brand">Pegador</p>
-                                <p class="item-price">59,95 €</p>
-                                <p class="item-size">L</p>
-                                <div class="quantity">
-                                    <div class="input-group">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="minus"
-                                            data-field="" aria-label="Decrease quantity"
-                                            onclick="alert('Producto decrementado!')">
-                                            <box-icon name='minus' size="20px"></box-icon>
-                                        </button>
-                                        <input type="number" name="quantity"
-                                            class="form-control input-number border-0 text-center" value="1"
-                                            aria-label="Product quantity">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="plus"
-                                            data-field="" aria-label="Increase quantity"
-                                            onclick="alert('Producto incrementado!')">
-                                            <box-icon name='plus' size="20px"></box-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart-item">
-                            <div class="image-wrapper">
-                                <img src="img/products_hoodie/product_1/image_0.webp" alt="Imagen de producto">
-                            </div>
-                            <div class="item-info">
-                                <h4>Pantalones UNISEX</h4>
-                                <p class="item-brand">YOURTURN</p>
-                                <p class="item-price">49,99 €</p>
-                                <p class="item-size">M</p>
-                                <div class="quantity">
-                                    <div class="input-group">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="minus"
-                                            data-field="" aria-label="Decrease quantity"
-                                            onclick="alert('Producto decrementado!')">
-                                            <box-icon name='minus' size="20px"></box-icon>
-                                        </button>
-                                        <input type="text" name="quantity"
-                                            class="form-control input-number border-0 text-center" value="1"
-                                            aria-label="Product quantity">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="plus"
-                                            data-field="" aria-label="Increase quantity"
-                                            onclick="alert('Producto incrementado!')">
-                                            <box-icon name='plus' size="20px"></box-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart-item">
-                            <div class="image-wrapper">
-                                <img src="img/products_hoodie/product_4/image_0.webp" alt="Imagen de producto">
-                            </div>
-                            <div class="item-info">
-                                <h4>THEORY OF ANOMALY FLUFFY</h4>
-                                <p class="item-brand">Upscale by Mister Tee</p>
-                                <p class="item-price">49,99 €</p>
-                                <p class="item-size">L</p>
-                                <div class="quantity">
-                                    <div class="input-group">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="minus"
-                                            data-field="" aria-label="Decrease quantity"
-                                            onclick="alert('Producto decrementado!')">
-                                            <box-icon name='minus' size="20px"></box-icon>
-                                        </button>
-                                        <input type="text" name="quantity"
-                                            class="form-control input-number border-0 text-center" value="1"
-                                            aria-label="Product quantity">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="plus"
-                                            data-field="" aria-label="Increase quantity"
-                                            onclick="alert('Producto incrementado!')">
-                                            <box-icon name='plus' size="20px"></box-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart-item">
-                            <div class="image-wrapper">
-                                <img src="img/products_hoodie/product_1/image_0.webp" alt="Imagen de producto">
-                            </div>
-                            <div class="item-info">
-                                <h4>SOLO TEE</h4>
-                                <p class="item-brand">Nike Sportswear</p>
-                                <p class="item-price">59,95 €</p>
-                                <p class="item-size">L</p>
-                                <div class="quantity">
-                                    <div class="input-group">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="minus"
-                                            data-field="" aria-label="Decrease quantity"
-                                            onclick="alert('Producto decrementado!')">
-                                            <box-icon name='minus' size="20px"></box-icon>
-                                        </button>
-                                        <input type="text" name="quantity"
-                                            class="form-control input-number border-0 text-center" value="1"
-                                            aria-label="Product quantity">
-                                        <button type="button" class="btn border-0 p-0 icon" data-type="plus"
-                                            data-field="" aria-label="Increase quantity"
-                                            onclick="alert('Producto incrementado!')">
-                                            <box-icon name='plus' size="20px"></box-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="items" id="checkout-items"></div>
                     <div class="under-cart">
                         <div class="total">
                             <p>Total</p>
-                            <p>219,88 €</p>
+                            <p id="checkout-total">0 €</p>
                         </div>
                     </div>
                 </div>
@@ -236,12 +123,14 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/base.js"></script>
+    <script src="js/shoppingCart.js"></script>
     <script>
         togglePayment('credit-card');
         function togglePayment(method) {
             document.querySelectorAll('.payment-method').forEach(el => el.style.display = 'none');
             document.getElementById(method).style.display = 'block';
         }
+        renderCheckoutItems();
     </script>
 </body>
 

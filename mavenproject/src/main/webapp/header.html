@@ -36,15 +36,16 @@
             <ul class="navbar-nav custom-icons order-lg-4 order-3">
                 <li>
                     <a href="login.html" class="nav-link icon" role="button">
-                        <box-icon type="solid" name="user" color='gray'></box-icon>
+                        <box-icon type="solid" name="user" color='#6F3939'></box-icon>
                         <span class="visually-hidden">Usuario</span>
                     </a>
                 </li>
                 <li>
                     <button class="nav-link icon" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <box-icon name='shopping-bag' type='solid' color='gray'></box-icon>
+                        <box-icon name='shopping-bag' type='solid' color='#6F3939'></box-icon>
                         <span class="visually-hidden">Cesta</span>
+                        <div class="shopping-cart-counter" id="shopping-cart-counter"></div>
                     </button>
                 </li>
             </ul>
@@ -52,21 +53,28 @@
     </nav>
 </header>
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-        <h3 class="offcanvas-title" id="offcanvasRightLabel">Cesta</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
+    <header>
+        <div id="cart-alert" class="alert alert-success d-none" role="alert">
+            Producto añadido al carrito
+        </div>
+
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasRightLabel">Cesta</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+    </header>
+    
     <div class="offcanvas-body">
         <div class="cart-box">
             <div class="items" id="cartItems"></div>
             <div class="under-cart">
                 <div class="total">
                     <p>Total</p>
-                    <p>219,88 €</p>
+                    <p id="cart-total">0 €</p>
                 </div>
                 <div class="buttons">
-                    <a href="login_cart.html" class="btn btn-primary">Checkout</a>
-                    <button type="button" class="btn btn-secondary" onclick="alert('Cesta vaciada!')">Vaciar</button>
+                    <button type="button" class="btn btn-primary" onclick="goToCheckOut()">Checkout</button>
+                    <button type="button" class="btn btn-secondary" onclick="clearCart()">Vaciar</button>
                 </div>
             </div>
         </div>

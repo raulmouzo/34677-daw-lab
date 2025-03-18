@@ -90,7 +90,21 @@ footer img {
 .icon {
     display: flex;
     align-items: center;
+    position: relative;
 }
+
+.shopping-cart-counter {
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #6F3939;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    padding:0 5px;
+    border-radius: 100%;
+  }
+
 
 .custom-nav {
     display: flex;
@@ -113,6 +127,15 @@ footer img {
     padding-bottom: 20px;
     border-bottom: 1px solid #d5d5d5; 
 }
+
+.offcanvas .alert {
+    background-color: #5CC777;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 0;
+    margin: 0;
+}
+
 .cart-box {
     display: flex;
     flex-direction: column;
@@ -242,7 +265,7 @@ input[type="number"] {
     gap: 10px;
 }
 
-.under-cart .buttons button {
+.under-cart .buttons .btn-secondary {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -252,7 +275,7 @@ input[type="number"] {
     width: 100%;
 }
 
-.under-cart .buttons a {
+.under-cart .buttons .btn-primary {
     flex: 3;
     display: flex;
     justify-content: center;
@@ -261,7 +284,7 @@ input[type="number"] {
     border: 1px solid #6f3939;
     color: #fff;
 }
-.under-cart .buttons a:hover {
+.under-cart .buttons .btn-primary:hover {
     background-color: #804242;
 }
 

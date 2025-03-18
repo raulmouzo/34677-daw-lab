@@ -32,12 +32,10 @@
 			<section class="row prd">
 				<header class="product-header">
 					<h2>NUEVOS PRODUCTOS</h2>
-					<a href="#" class="btn btn-link">Ver todos</a>
 				</header>
 				<article class="col-sm-12 col-md-6 col-lg-3">
 					<div class="card">
 						<div id="prd-1" class="carousel slide img-prd">
-
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<img src="img/products_hoodie/product_1/image_0.webp" class="d-block w-100"
@@ -52,7 +50,6 @@
 										alt="Imagen de producto">
 								</div>
 							</div>
-
 							<button class="carousel-control-prev" type="button" data-bs-target="#prd-1"
 								data-bs-slide="prev">
 								<box-icon name='chevron-left' color="black" size="70px"></box-icon>
@@ -67,27 +64,27 @@
 								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
 							</button>
 							<div class="sizes">
-								<button type="button" onclick="alert('Producto añadido!')">S</button>
-								<button type="button" onclick="alert('Producto añadido!')">M</button>
-								<button type="button" onclick="alert('Producto añadido!')">L</button>
-								<button type="button" onclick="alert('Producto añadido!')">XL</button>
+								<button type="button"
+									onclick="addProductToCart(1, 1, 'Nike Sportswear', 69.95, 'Nike', 'Sudadera', 'S', 'img/products_hoodie/product_1/image_0.webp')">S</button>
+								<button type="button"
+									onclick="addProductToCart(1, 2, 'Nike Sportswear', 69.95, 'Nike', 'Sudadera', 'M', 'img/products_hoodie/product_1/image_0.webp')">M</button>
+								<button type="button"
+									onclick="addProductToCart(1, 3, 'Nike Sportswear', 69.95, 'Nike', 'Sudadera', 'L', 'img/products_hoodie/product_1/image_0.webp')">L</button>
+								<button type="button"
+									onclick="addProductToCart(1, 4, 'Nike Sportswear', 69.95, 'Nike', 'Sudadera', 'XL', 'img/products_hoodie/product_1/image_0.webp')">XL</button>
 							</div>
 						</div>
-
 						<div class="card-body">
 							<h3 class="card-title">Nike Sportswear</h3>
 							<p class="card-text">HOODIE - Sudadera</p>
 							<span>69,95 €</span>
 						</div>
-
 					</div>
 				</article>
 
 				<article class="col-sm-12 col-md-6 col-lg-3">
 					<div class="card">
-
 						<div id="prd-2" class="carousel slide img-prd">
-
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<img src="img/products_t-shirts/product_1/image_0.webp" class="d-block w-100"
@@ -102,7 +99,6 @@
 										alt="Imagen de producto">
 								</div>
 							</div>
-
 							<button class="carousel-control-prev" type="button" data-bs-target="#prd-2"
 								data-bs-slide="prev">
 								<box-icon name='chevron-left' color="black" size="70px"></box-icon>
@@ -117,26 +113,27 @@
 								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
 							</button>
 							<div class="sizes">
-								<button type="button" onclick="alert('Producto añadido!')">S</button>
-								<button type="button" onclick="alert('Producto añadido!')">M</button>
-								<button type="button" onclick="alert('Producto añadido!')">L</button>
-								<button type="button" onclick="alert('Producto añadido!')">XL</button>
+								<button type="button"
+									onclick="addProductToCart(2, 1, 'Champion', 29.95, 'Champion', 'Camiseta', 'S', 'img/products_t-shirts/product_1/image_0.webp')">S</button>
+								<button type="button"
+									onclick="addProductToCart(2, 2, 'Champion', 29.95, 'Champion', 'Camiseta', 'M', 'img/products_t-shirts/product_1/image_0.webp')">M</button>
+								<button type="button"
+									onclick="addProductToCart(2, 3, 'Champion', 29.95, 'Champion', 'Camiseta', 'L', 'img/products_t-shirts/product_1/image_0.webp')">L</button>
+								<button type="button"
+									onclick="addProductToCart(2, 4, 'Champion', 29.95, 'Champion', 'Camiseta', 'XL', 'img/products_t-shirts/product_1/image_0.webp')">XL</button>
 							</div>
 						</div>
-
 						<div class="card-body">
 							<h3 class="card-title">Champion</h3>
 							<p class="card-text">ATHLETICS GYM WITH PRINT </p>
 							<span>29,95 €</span>
 						</div>
-
 					</div>
 				</article>
 
 				<article class="col-sm-12 col-md-6 col-lg-3">
 					<div class="card">
 						<div id="prd-3" class="carousel slide img-prd">
-
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<img src="img/products_hoodie/product_2/image_0.webp" class="d-block w-100"
@@ -151,7 +148,6 @@
 										alt="Imagen de producto">
 								</div>
 							</div>
-
 							<button class="carousel-control-prev" type="button" data-bs-target="#prd-3"
 								data-bs-slide="prev">
 								<box-icon name='chevron-left' color="black" size="70px"></box-icon>
@@ -166,19 +162,21 @@
 								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
 							</button>
 							<div class="sizes">
-								<button type="button" onclick="alert('Producto añadido!')">S</button>
-								<button type="button" onclick="alert('Producto añadido!')">M</button>
-								<button type="button" onclick="alert('Producto añadido!')">L</button>
-								<button type="button" onclick="alert('Producto añadido!')">XL</button>
+								<button type="button"
+									onclick="addProductToCart(3, 1, 'YOURTURN', 44.99, 'YOURTURN', 'Sudadera', 'S', 'img/products_hoodie/product_2/image_0.webp')">S</button>
+								<button type="button"
+									onclick="addProductToCart(3, 2, 'YOURTURN', 44.99, 'YOURTURN', 'Sudadera', 'M', 'img/products_hoodie/product_2/image_0.webp')">M</button>
+								<button type="button"
+									onclick="addProductToCart(3, 3, 'YOURTURN', 44.99, 'YOURTURN', 'Sudadera', 'L', 'img/products_hoodie/product_2/image_0.webp')">L</button>
+								<button type="button"
+									onclick="addProductToCart(3, 4, 'YOURTURN', 44.99, 'YOURTURN', 'Sudadera', 'XL', 'img/products_hoodie/product_2/image_0.webp')">XL</button>
 							</div>
 						</div>
-
 						<div class="card-body">
 							<h3 class="card-title">YOURTURN</h3>
 							<p class="card-text">WASHED ZIP-HOODIE UNISEX</p>
 							<span>44,99 €</span>
 						</div>
-
 					</div>
 				</article>
 
@@ -215,21 +213,24 @@
 								<box-icon name="plus-circle" size="md" color="#55555569" type="solid"></box-icon>
 							</button>
 							<div class="sizes">
-								<button type="button" onclick="addProductToCart(1,'ADIDAS ORIGINALS',74.95,'Adidas','Sudadera', 'img/1'  )">S</button>
-								<button type="button" onclick="alert('Producto añadido!')">M</button>
-								<button type="button" onclick="alert('Producto añadido!')">L</button>
-								<button type="button" onclick="alert('Producto añadido!')">XL</button>
+								<button type="button"
+									onclick="addProductToCart(4, 1, 'ADIDAS ORIGINALS',74.95,'Adidas','Pantalones','S', 'img/products_pants/product_1/image_0.webp')">S</button>
+								<button type="button"
+									onclick="addProductToCart(4, 2, 'ADIDAS ORIGINALS',74.95,'Adidas','Pantalones','M', 'img/products_pants/product_1/image_0.webp')">M</button>
+								<button type="button"
+									onclick="addProductToCart(4, 3, 'ADIDAS ORIGINALS',74.95,'Adidas','Pantalones','L', 'img/products_pants/product_1/image_0.webp')">L</button>
+								<button type="button"
+									onclick="addProductToCart(4, 4, 'ADIDAS ORIGINALS',74.95,'Adidas','Pantalones', 'XL', 'img/products_pants/product_1/image_0.webp')">XL</button>
 							</div>
 						</div>
 
 						<div class="card-body">
-							<h3 class="card-title"><bold>ADIDAS ORIGINALS</bold></h3>
+							<h3 class="card-title">
+								<bold>ADIDAS ORIGINALS</bold>
+							</h3>
 							<p class="card-text">ADIBREAK UNISEX</p>
 							<span>74,95 €</span>
 						</div>
-
-					</div>
-				</article>
 			</section>
 		</div>
 	</main>
@@ -239,7 +240,7 @@
 		crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	<script src="js/base.js"></script>
-	<script src="js/bag.js"></script>
+	<script src="js/shoppingCart.js"></script>
 	<script>
 		function showSizes(button) {
 			button.nextElementSibling.classList.toggle('show');
