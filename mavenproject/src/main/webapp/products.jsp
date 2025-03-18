@@ -83,7 +83,7 @@
                                     <button type="button" class="ticked-size" disabled><%= size %></button>
                                     <% } else { %>
                                     <button type="button"
-                                            onclick="addProductToCart(<%= productId %>, <%= variantId %>, '<%= description %>', <%= price %>, '<%= brand %>', '<%=category%>','<%=size%>' ,'img/<%= (images.isEmpty() ? "default.png" : images.get(0)) %>')">
+                                            onclick="addProductToCart(<%= productId %>, <%= variantId %>, '<%= description %>', <%= price %>, '<%= brand %>', <%=category%>,'<%=size%>' ,'img/<%= (images.isEmpty() ? "default.png" : images.get(0)) %>', <%=stock%>)">
                                             <%= size %>
                                     </button>
                                     <% } %>

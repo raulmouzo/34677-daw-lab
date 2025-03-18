@@ -1,5 +1,5 @@
 class ProductCart {
-    constructor(productId, variantId, description, price, brand, category, quantity, size, image) {
+    constructor(productId, variantId, description, price, brand, category, quantity, size, image, stock) {
         this.productId = productId;
         this.variantId = variantId;
         this.description = description;
@@ -9,6 +9,7 @@ class ProductCart {
         this.quantity = quantity;
         this.size = size;
         this.image = image;
+        this.stock = stock;
     }
 }
 
@@ -24,10 +25,11 @@ function saveCart() {
     localStorage.setItem("stored-cart", JSON.stringify(cart));
 }
 
-function modifyProductQuantity(productId, variantId, quantity) {
+function modifyProductQuantity(productId, variantId, quantity, stock) {
     productId = parseInt(productId);
     variantId = parseInt(variantId);
     quantity = parseInt(quantity);
+    stock = parseInt(stock);
 
     console.log("Modifying product quantity: ", productId, variantId, typeof productId, quantity, typeof quantity);
     loadCart();
@@ -40,6 +42,12 @@ function modifyProductQuantity(productId, variantId, quantity) {
         return;
     }
 
+    console.log("quantity: ", quantity, "stock: ", stock);
+    if (quantity > stock) {
+        alert("No hay suficiente stock para ese producto");
+        return;
+    }
+
     if (isNaN(quantity) || quantity < 1) {
         removeProductFromCart(productId, variantId);
     } else {
@@ -49,31 +57,35 @@ function modifyProductQuantity(productId, variantId, quantity) {
     }
 }
 
-function addProductToCart(productId, variantId, description, price, brand, category, size, image) {
+function addProductToCart(productId, variantId, description, price, brand, category, size, image, stock) {
     loadCart();
     productId = parseInt(productId);
     variantId = parseInt(variantId);
+    stock = parseInt(stock);
 
     // Check if the product already exists using both productId and variantId
     let existingProduct = cart.find(product => product.productId === productId && product.variantId === variantId);
 
     if (existingProduct) {
-        modifyProductQuantity(productId, variantId, existingProduct.quantity + 1);
+        modifyProductQuantity(productId, variantId, existingProduct.quantity + 1, stock);
     } else {
-        let product = new ProductCart(productId, variantId, description, price, brand, category, 1, size, image);
+        let product = new ProductCart(productId, variantId, description, price, brand, category, 1, size, image, stock);
+        console.log(product.stock)
         cart.push(product);
         saveCart();
         renderCartItems();
     }
 
-    // Show cart alert
-    new bootstrap.Offcanvas(document.querySelector('#offcanvasRight')).show();
-    let cartAlert = document.getElementById("cart-alert");
-    cartAlert.classList.remove("d-none");
-    cartAlert.classList.add("show");
-    setTimeout(() => {
-        hideCartAlert();
-    }, 3000);
+    if (product.quantity  <= product.stock ) {
+        // Show cart alert
+        new bootstrap.Offcanvas(document.querySelector('#offcanvasRight')).show();
+        let cartAlert = document.getElementById("cart-alert");
+        cartAlert.classList.remove("d-none");
+        cartAlert.classList.add("show");
+        setTimeout(() => {
+            hideCartAlert();
+        }, 3000);
+    }
 }
 
 function removeProductFromCart(productId, variantId) {
@@ -129,11 +141,11 @@ function renderCartItems() {
                 <p class="item-size">${product.size}</p>
                 <div class="control-elements">
                     <div class="input-group quantity">
-                        <button type="button" class="btn border-0 p-0 icon" data-type="minus" aria-label="Decrease quantity" onclick="modifyProductQuantity('${product.productId}', '${product.variantId}', ${product.quantity - 1})">
+                        <button type="button" class="btn border-0 p-0 icon" data-type="minus" aria-label="Decrease quantity" onclick="modifyProductQuantity('${product.productId}', '${product.variantId}', ${product.quantity - 1}, ${product.stock})">
                             <box-icon name='minus' size="20px"></box-icon>
                         </button>
-                        <input type="number" name="quantity" class="form-control input-number border-0 text-center" value="${product.quantity}" min="1" max="100" aria-label="Product quantity" onchange="modifyProductQuantity('${product.productId}', '${product.variantId}', this.value)">
-                        <button type="button" class="btn border-0 p-0 icon" data-type="plus" aria-label="Increase quantity" onclick="modifyProductQuantity('${product.productId}', '${product.variantId}', ${product.quantity + 1})">
+                        <input type="number" name="quantity" class="form-control input-number border-0 text-center" value="${product.quantity}" min="1" max="100" aria-label="Product quantity" onchange="modifyProductQuantity('${product.productId}', '${product.variantId}', this.value, ${product.stock})">
+                        <button type="button" class="btn border-0 p-0 icon" data-type="plus" aria-label="Increase quantity" onclick="modifyProductQuantity('${product.productId}', '${product.variantId}', ${product.quantity + 1}, ${product.stock})">
                             <box-icon name='plus' size="20px"></box-icon>
                         </button>
                     </div>
