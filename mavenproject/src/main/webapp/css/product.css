@@ -70,6 +70,11 @@ article{
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+.ticked-size {
+    text-decoration: line-through; 
+    color: #424242 !important; 
+}
+
 
 .card:hover .sizes {
     opacity: 1;

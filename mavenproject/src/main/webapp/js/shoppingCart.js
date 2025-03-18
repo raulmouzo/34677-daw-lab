@@ -127,7 +127,6 @@ function renderCartItems() {
                 <p class="item-brand">${product.brand}</p>
                 <p class="item-price">${productTotal} €</p>
                 <p class="item-size">${product.size}</p>
-                <p class="item-category">${product.category}</p>
                 <div class="control-elements">
                     <div class="input-group quantity">
                         <button type="button" class="btn border-0 p-0 icon" data-type="minus" aria-label="Decrease quantity" onclick="modifyProductQuantity('${product.productId}', '${product.variantId}', ${product.quantity - 1})">
