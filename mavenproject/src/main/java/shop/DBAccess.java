@@ -100,6 +100,43 @@ public class DBAccess {
         return variants;
     }
 
+    public List<DBProduct> getNewProducts() {
+        openConnection();
+        List<DBProduct> products = new ArrayList<>();
+        String query = "SELECT * FROM products ORDER BY id DESC LIMIT 4";
+    
+        try (PreparedStatement stmt = conn.prepareStatement(query)) {
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    String query_img = "SELECT * FROM product_images WHERE product_id = ?";
+                    List<String> images = new ArrayList<>();
+                    try (PreparedStatement stmt_img = conn.prepareStatement(query_img)) {
+                        stmt_img.setInt(1, rs.getInt("id"));
+                        try (ResultSet rs_img = stmt_img.executeQuery()) {
+                            while (rs_img.next()) {
+                                images.add(rs_img.getString("image_url"));
+                            }
+                        }
+                    }
+    
+                    DBProduct product = new DBProduct();
+                    product.setId(rs.getInt("id"));
+                    product.setDescription(rs.getString("description"));
+                    product.setPrice(rs.getDouble("price"));
+                    product.setBrand(rs.getString("brand"));
+                    product.setCategoryId(rs.getInt("category_id"));
+                    product.setImages(images);
+                    
+                    products.add(product);
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Error getting new products: " + e.getMessage());
+        }
+        return products;
+    }
+    
+
     public int checkUserDB(String user, String pass) {
             openConnection();
             int userId = -1;

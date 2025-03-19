@@ -20,9 +20,9 @@
                             Productos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="product_hoodies.html">Sudaderas</a></li>
-                            <li><a class="dropdown-item" href="product_t-shirts.html">Camisetas</a></li>
-                            <li><a class="dropdown-item" href="product_pants.html">Pantalones</a></li>
+                            <li><a class="dropdown-item" href="products.jsp?cat=1">Sudaderas</a></li>
+                            <li><a class="dropdown-item" href="products.jsp?cat=2">Camisetas</a></li>
+                            <li><a class="dropdown-item" href="products.jsp?cat=3">Pantalones</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

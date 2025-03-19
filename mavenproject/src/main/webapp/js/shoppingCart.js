@@ -137,7 +137,7 @@ function renderCartItems() {
             <div class="item-info">
                 <h4>${product.description}</h4>
                 <p class="item-brand">${product.brand}</p>
-                <p class="item-price">${productTotal} €</p>
+                <p class="item-price">${productTotal.toFixed(2)} €</p>
                 <p class="item-size">${product.size}</p>
                 <div class="control-elements">
                     <div class="input-group quantity">
@@ -188,7 +188,7 @@ function renderCheckoutItems() {
             <div class="item-info">
                 <h4>${product.description}</h4>
                 <p class="item-brand">${product.brand}</p>
-                <p class="item-price">${product.price} €</p>
+                <p class="item-price">${product.price.toFixed(2)} €</p>
                 <p class="item-size">${product.size}</p>
                 <p class="item-quantity">Cantidad: ${product.quantity}</p>
                 <p class="item-total">Total: ${productTotal} €</p>

@@ -15,7 +15,8 @@
 
 <body>
     <%
-	    int category = 1;
+        String categoryParam = request.getParameter("cat");
+        int category = (categoryParam != null) ? Integer.parseInt(categoryParam) : 1;
 	    DBAccess conn=DBAccess.getInstance();
 	    List<DBProduct> products = conn.getProductsByCategory(category);
     %>
@@ -24,7 +25,13 @@
 	<main>
 		<div class="container">
 			<section class="row prd">
-				<h1 class="mt-4 mb-3">Productos</h1>
+                <% if (category == 1) { %>
+                <h1 class="mt-4 mb-3">Sudaderas</h1>
+                <% } else if (category == 2) { %>
+                <h1 class="mt-4 mb-3">Camisetas</h1>
+                <% } else if (category == 3) { %>
+                <h1 class="mt-4 mb-3">Pantalones</h1>
+                <% } %>
 
                 <% for (DBProduct product : products) { 
                     int productId = product.getId();

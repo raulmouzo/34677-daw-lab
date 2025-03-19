@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" import="java.util.List,shop.*" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +27,7 @@
         if (message != null) {
             session.removeAttribute("message");
     %>
-    <div class="alert alert-warning" role="alert">
+    <div class="alert alert-danger" role="alert">
         <%= message %>
     </div>
     <%
