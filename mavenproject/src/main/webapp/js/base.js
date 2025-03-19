@@ -4,7 +4,7 @@ class HeaderComponent extends HTMLElement {
     }
 
     async connectedCallback() {
-        const response = await fetch('header.html');
+        const response = await fetch('header.jsp');
         const content = await response.text();
         this.innerHTML = content;
         const cartItemsContainer = document.getElementById("cartItems");

@@ -35,18 +35,39 @@
             </div>
             <ul class="navbar-nav custom-icons order-lg-4 order-3">
                 <li>
-                    <a href="login.html" class="nav-link icon" role="button">
-                        <box-icon type="solid" name="user" color='#6F3939'></box-icon>
-                        <span class="visually-hidden">Usuario</span>
-                    </a>
-                </li>
-                <li>
                     <button class="nav-link icon" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <box-icon name='shopping-bag' type='solid' color='#6F3939'></box-icon>
                         <span class="visually-hidden">Cesta</span>
                         <div class="shopping-cart-counter" id="shopping-cart-counter"></div>
                     </button>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link icon dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <box-icon type="solid" name="user" color='#6F3939'></box-icon>
+                        <span class="visually-hidden">Usuario</span>
+                    </a>
+                
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <%
+                            Integer userId = (Integer) session.getAttribute("userId"); 
+                            if (userId == null || userId <= 0) { 
+                        %>
+                            <li><a href="login.jsp?next=profile.html" class="dropdown-item">Iniciar sesión</a></li>
+                        <%
+                            } else { 
+                                String userName = (String) session.getAttribute("userName"); 
+                                if (userName == null) userName = "Usuario"; 
+                        %>
+                            <li><span class="dropdown-item-text fw-bold"><%= userName %></span></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="profile.html" class="dropdown-item">Perfil</a></li>
+                            <li><a href="logout.jsp" class="dropdown-item text-danger">Cerrar sesión</a></li>
+                        <%
+                            }
+                        %>
+                    </ul>
                 </li>
             </ul>
         </div>

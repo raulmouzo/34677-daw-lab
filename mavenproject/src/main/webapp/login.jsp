@@ -15,28 +15,55 @@
 
 <body>
     <my-header class="sticky-top"></my-header>
+
+    <%
+        String next = request.getParameter("next");
+        String message = (String) session.getAttribute("message");
+        
+        if (next == null) {
+            next = "index.jsp";
+        }
+        if (message != null) {
+            session.removeAttribute("message");
+    %>
+    <div class="alert alert-warning" role="alert">
+        <%= message %>
+    </div>
+    <%
+    }
+    %>
+
+    <%
+    Integer userId = (Integer) session.getAttribute("userId");
+    if (userId == null || userId <= 0) {
+    %>
     <main>
         <div class="container">
             <h1>Iniciar sesión</h1>
             <div class="login-register">
                 <div class="login">
                     <h2>INICIAR SESIÓN</h2>
-                    <form>
+                    <form action="login" method="post">
+                        <input type="hidden" name="next" value="<%= (next != null) ? next : "" %>">
                         <div class="mb-3">
-                            <label for="inputUsuario" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" id="inputUsuario" aria-describedby="usuarioAyuda">
+                            <label for="userInput" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="userInput" name="user" required aria-describedby="usuarioAyuda">
                             <div id="usuarioAyuda" class="form-text">Nunca compartiremos tu usuario con nadie más.</div>
                         </div>
+                    
                         <div class="mb-3">
-                            <label for="inputContraseña" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="inputContraseña">
+                            <label for="PassInput" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="PassInput" name="pass" required>
                         </div>
+                    
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="checkRecordarme">
-                            <label class="form-check-label" for="checkRecordarme">Recuérdame</label>
+                            <input type="checkbox" class="form-check-input" id="rememberCheck" name="remember">
+                            <label class="form-check-label" for="rememberCheck">Recuérdame</label>
                         </div>
-                        <a href="profile.html" class="btn btn-outline-primary login-btn">Iniciar sesión</a>
+                    
+                        <button type="submit" class="btn btn-outline-secondary login-btn">Iniciar sesión</button>
                     </form>
+                    
                 </div>
                 <div class="register">
                     <h2>¿NO TIENES CUENTA? REGÍSTRATE</h2>
@@ -63,6 +90,11 @@
                     role="button">Crear cuenta</a>
             </div>
         </div>
+        <%
+        } else {
+            response.sendRedirect(next);
+        }
+        %>
     </main>
     <my-footer></my-footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -70,6 +102,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/base.js"></script>
+    <script src="js/shoppingCart.js"></script>
 </body>
 
 </html>

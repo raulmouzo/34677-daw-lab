@@ -120,6 +120,9 @@ footer img {
     flex-direction: row;
     gap: 10px;
 }
+.dropdown-menu{
+    position: absolute !important;
+}
 
 /* Offcanvas body */
 

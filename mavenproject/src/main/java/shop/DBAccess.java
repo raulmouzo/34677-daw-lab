@@ -99,4 +99,30 @@ public class DBAccess {
         }
         return variants;
     }
+
+    public int checkUserDB(String user, String pass) {
+            openConnection();
+            int userId = -1;
+        
+            try {
+                String query = "SELECT id FROM users WHERE username=? AND password=?";
+                PreparedStatement statement = conn.prepareStatement(query);
+                statement.setString(1, user);
+                statement.setString(2, pass);
+        
+                ResultSet resultSet = statement.executeQuery();
+        
+                if (resultSet.next()) {
+                    userId = resultSet.getInt("id");
+                }
+            } catch (Exception e) {
+                // Error while connecting to the database or executing the query
+                System.err.println("Error checking username/password");
+                System.err.println(e.getMessage());
+                e.printStackTrace();
+            }
+        
+            return userId;
+        }
+        
 }

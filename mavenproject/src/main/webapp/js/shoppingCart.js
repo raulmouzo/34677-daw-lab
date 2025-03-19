@@ -64,19 +64,19 @@ function addProductToCart(productId, variantId, description, price, brand, categ
     stock = parseInt(stock);
 
     // Check if the product already exists using both productId and variantId
-    let existingProduct = cart.find(product => product.productId === productId && product.variantId === variantId);
+    let product = cart.find(product => product.productId === productId && product.variantId === variantId);
 
-    if (existingProduct) {
-        modifyProductQuantity(productId, variantId, existingProduct.quantity + 1, stock);
+    if (product) {
+        modifyProductQuantity(productId, variantId,product.quantity + 1, stock);
     } else {
-        let product = new ProductCart(productId, variantId, description, price, brand, category, 1, size, image, stock);
+        product = new ProductCart(productId, variantId, description, price, brand, category, 1, size, image, stock);
         console.log(product.stock)
         cart.push(product);
         saveCart();
         renderCartItems();
     }
 
-    if (product.quantity  <= product.stock ) {
+    if (product && product.quantity <= product.stock) {
         // Show cart alert
         new bootstrap.Offcanvas(document.querySelector('#offcanvasRight')).show();
         let cartAlert = document.getElementById("cart-alert");
@@ -219,6 +219,6 @@ function goToCheckOut() {
         alert("Tu carrito está vacío.");
         return;
     } else {
-        window.location.href = "checkout.html";
+        window.location.href = "login.jsp?next=checkout.html";
     }
 }
