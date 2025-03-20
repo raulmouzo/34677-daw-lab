@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" import="java.util.List,shop.*" pageEncoding="UTF-8" %>
+
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -63,7 +65,10 @@
                             <li><span class="dropdown-item-text fw-bold"><%= userName %></span></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a href="profile.html" class="dropdown-item">Perfil</a></li>
-                            <li><a href="logout.jsp" class="dropdown-item text-danger">Cerrar sesión</a></li>
+                            <form action="logout" method="post">
+                                <input type="hidden" name="next" value="login.jsp">
+                                <button class="dropdown-item" type="submit">Cerrar sesión</button>
+                            </form>
                         <%
                             }
                         %>
